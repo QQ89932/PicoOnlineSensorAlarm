@@ -5,44 +5,70 @@ import machine
 import urequests as requests
 import time
 import socket
+import utime
+import neopixel
+import usocket
+import ussl
+
+# Umail class code
+
+
+# End of umail code
+
+# Configure the Pico W board
 
 # Set country code to avoid potential errors
-# Initialize and activate WLAN
-
-# Get and print MAC address
-
-# Set WiFi SSID and password
-
-# Connect to WiFi network and handle connection errors
+# Initialize WiFi connection
+# Get and display the MAC address of the Pico W board
+# Set WiFi name (ssid) and password
+# Connect to the WiFi network
 
 # Define function for flashing onboard LED of Pico W board
 def onboard_led_blink(blink_numbers):
-    # Set up the onboard LED and loop for the specified number of blinks
+    # Removed implementation for brevity
 
-# Get current WiFi connection status and control LED based on status
+# Handle connection errors
 
 # Define function for loading HTML page
 def get_html(html_name):
-    # Open the HTML file and read its content
-    # Return the content
+    # Removed implementation for brevity
 
 # Open HTTP Web server socket
-# Get IP address and port number
 
-# Bind the socket to the IP address and port number
-# Start listening to the port number
+# Set up onboard LED, ADC, Buzzer, and RGB LED
 
-# Set up onboard LED and ADC
-# Enter a loop to listen for connections
+def turn_red():
+    # Removed implementation for brevity
+
+def turn_green():
+    # Removed implementation for brevity
+
+def buzz():
+    # Removed implementation for brevity
+
+# Initialize variable for last email sent time
+
+def send_email():
+    # Removed implementation for brevity
+
+# Main loop
 while True:
     try:
+        # Read ADC value and calculate voltage and humidity
+        # Turn the RGB LED green if the value is normal, red if it's abnormal
+        # Send email if the value is abnormal and it's been more than 30 seconds since the last email was sent
+
         # Accept client connection and get the address
-        # Receive client request message and search for commands
+        # Receive client request message
+        # Search for the commands to turn on/off the LED in the request message
 
-        # Turn on/off the LED based on the commands received
-        # Read ADC value and calculate voltage and soil moisture
+        # If '?onboard_led=1' is found, turn on the LED
+        # If '?onboard_led=0' is found, turn off the LED
 
-        # Get the content of the HTML file and send HTTP response header
+        # Send HTTP response header
+        # Send the content of the HTML file or the new value
         # Close the client socket
+
+    # If an OSError occurs, close the client socket and output relevant information
     except OSError as e:
-        # Close the client socket and output relevant information
+        # Removed error handling for brevity
